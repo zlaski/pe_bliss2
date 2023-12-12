@@ -309,6 +309,9 @@
     <ClCompile Include="src\tls\tls_directory_loader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\boost\boost.vcxproj">
+      <Project>{3df747e8-ab1b-443a-ab11-072ee2ed8e21}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\buffers\buffers.vcxproj">
       <Project>{5337cf3f-d0af-434f-9702-cc5e8a86251b}</Project>
     </ProjectReference>
@@ -377,19 +380,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>build\$(Configuration)\</IntDir>
+    <IntDir>$(ProjectDir).build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(AKIROOT)\.install\$(Platform)-$(Configuration)\lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IntDir>build\$(Configuration)\</IntDir>
+    <IntDir>$(ProjectDir).build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(AKIROOT)\.install\$(Platform)-$(Configuration)\lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>build\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(ProjectDir).build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(AKIROOT)\.install\$(Platform)-$(Configuration)\lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IntDir>build\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(ProjectDir).build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(AKIROOT)\.install\$(Platform)-$(Configuration)\lib\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -398,7 +405,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\buffers\include;include;$(ProjectDir)\..\external\pugixml;$(BoostDir);$(SimpleAsn1Dir);$(CryptoPPDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(AKIROOT)\.install\$(Platform)-$(Configuration)\include\;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\buffers\include;include;$(ProjectDir)\..\external\pugixml;$(BoostDir);$(SimpleAsn1Dir);$(CryptoPPDir)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -417,7 +424,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\buffers\include;include;$(ProjectDir)\..\external\pugixml;$(BoostDir);$(SimpleAsn1Dir);$(CryptoPPDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(AKIROOT)\.install\$(Platform)-$(Configuration)\include\;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\buffers\include;include;$(ProjectDir)\..\external\pugixml;$(BoostDir);$(SimpleAsn1Dir);$(CryptoPPDir)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
@@ -436,7 +443,7 @@
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\buffers\include;include;$(ProjectDir)\..\external\pugixml;$(BoostDir);$(SimpleAsn1Dir);$(CryptoPPDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(AKIROOT)\.install\$(Platform)-$(Configuration)\include\;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\buffers\include;include;$(ProjectDir)\..\external\pugixml;$(BoostDir);$(SimpleAsn1Dir);$(CryptoPPDir)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -455,7 +462,7 @@
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\buffers\include;include;$(ProjectDir)\..\external\pugixml;$(BoostDir);$(SimpleAsn1Dir);$(CryptoPPDir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(AKIROOT)\.install\$(Platform)-$(Configuration)\include\;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\buffers\include;include;$(ProjectDir)\..\external\pugixml;$(BoostDir);$(SimpleAsn1Dir);$(CryptoPPDir)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>

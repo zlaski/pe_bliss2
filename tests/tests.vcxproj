@@ -76,15 +76,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(AKIROOT)\.install\$(Platform)-$(Configuration)\bin\</OutDir>
+    <IntDir>$(ProjectDir).build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(AKIROOT)\.install\$(Platform)-$(Configuration)\bin\</OutDir>
+    <IntDir>$(ProjectDir).build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(AKIROOT)\.install\$(Platform)-$(Configuration)\bin\</OutDir>
+    <IntDir>$(ProjectDir).build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(AKIROOT)\.install\$(Platform)-$(Configuration)\bin\</OutDir>
+    <IntDir>$(ProjectDir).build\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -93,7 +101,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\..\buffers\include;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\pe_bliss2\include;$(ProjectDir)\..\external\googletest\googletest\include;$(ProjectDir)\..\external\googletest\googlemock\include;$(ProjectDir)\..\external\googletest\googletest;$(ProjectDir)\..\external\googletest\googlemock;$(BoostDir);%(AdditionalIncludeDirectories);$(SimpleAsn1Dir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(AKIROOT)\.install\$(Platform)-$(Configuration)\include;$(ProjectDir);$(ProjectDir)\..\buffers\include;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\pe_bliss2\include;$(ProjectDir)\..\external\googletest\googletest\include;$(ProjectDir)\..\external\googletest\googlemock\include;$(ProjectDir)\..\external\googletest\googletest;$(ProjectDir)\..\external\googletest\googlemock;$(BoostDir);%(AdditionalIncludeDirectories);$(SimpleAsn1Dir)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -114,7 +122,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\..\buffers\include;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\pe_bliss2\include;$(ProjectDir)\..\external\googletest\googletest\include;$(ProjectDir)\..\external\googletest\googlemock\include;$(ProjectDir)\..\external\googletest\googletest;$(ProjectDir)\..\external\googletest\googlemock;$(BoostDir);%(AdditionalIncludeDirectories);$(SimpleAsn1Dir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(AKIROOT)\.install\$(Platform)-$(Configuration)\include;$(ProjectDir);$(ProjectDir)\..\buffers\include;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\pe_bliss2\include;$(ProjectDir)\..\external\googletest\googletest\include;$(ProjectDir)\..\external\googletest\googlemock\include;$(ProjectDir)\..\external\googletest\googletest;$(ProjectDir)\..\external\googletest\googlemock;$(BoostDir);%(AdditionalIncludeDirectories);$(SimpleAsn1Dir)</AdditionalIncludeDirectories>
       <ControlFlowGuard>Guard</ControlFlowGuard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -134,7 +142,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\..\buffers\include;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\pe_bliss2\include;$(ProjectDir)\..\external\googletest\googletest\include;$(ProjectDir)\..\external\googletest\googlemock\include;$(ProjectDir)\..\external\googletest\googletest;$(ProjectDir)\..\external\googletest\googlemock;$(BoostDir);%(AdditionalIncludeDirectories);$(SimpleAsn1Dir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(AKIROOT)\.install\$(Platform)-$(Configuration)\include;$(ProjectDir);$(ProjectDir)\..\buffers\include;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\pe_bliss2\include;$(ProjectDir)\..\external\googletest\googletest\include;$(ProjectDir)\..\external\googletest\googlemock\include;$(ProjectDir)\..\external\googletest\googletest;$(ProjectDir)\..\external\googletest\googlemock;$(BoostDir);%(AdditionalIncludeDirectories);$(SimpleAsn1Dir)</AdditionalIncludeDirectories>
       <ControlFlowGuard>
       </ControlFlowGuard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -155,7 +163,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)\..\buffers\include;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\pe_bliss2\include;$(ProjectDir)\..\external\googletest\googletest\include;$(ProjectDir)\..\external\googletest\googlemock\include;$(ProjectDir)\..\external\googletest\googletest;$(ProjectDir)\..\external\googletest\googlemock;$(BoostDir);%(AdditionalIncludeDirectories);$(SimpleAsn1Dir)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(AKIROOT)\.install\$(Platform)-$(Configuration)\include;$(ProjectDir);$(ProjectDir)\..\buffers\include;$(ProjectDir)\..\utilities\include;$(ProjectDir)\..\pe_bliss2\include;$(ProjectDir)\..\external\googletest\googletest\include;$(ProjectDir)\..\external\googletest\googlemock\include;$(ProjectDir)\..\external\googletest\googletest;$(ProjectDir)\..\external\googletest\googlemock;$(BoostDir);%(AdditionalIncludeDirectories);$(SimpleAsn1Dir)</AdditionalIncludeDirectories>
       <ControlFlowGuard>false</ControlFlowGuard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
